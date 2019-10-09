@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1>Excercise Tracker</h1>
+    <div class=container1>
+    <form method="POST" action="/api/exercise/new-user">
+        <h3>Create a new user</h3>
+        <h4><code>POST /api/exercise/new-user</code></h4>
+        <input type="text" placeholder="Inser new username" name="user">
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <div class="container2">
+        <form method="POST" action="/api/exercise/add">
+        <h3>Add excercises</h3>
+        <h4><code>POST /api/exercise/add</code></h4>
+        <input type="text" placeholder="userId" name="_id" required>
+        <input type="text" placeholder="description" name="desc" required>
+        <input type="number" placeholder="duaration* (mins.)" name="time" required>
+        <input type="datetime" placeholder="date (yyyy-mm-dd)" name="date">
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <div>
+        <p>GET user's exercise log:<code><bold>GET /api/exercise/log?{userId}[&from][&to][&limit]</bold></code></p>
+    </div>
+</body>
+</html>
